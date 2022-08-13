@@ -38,18 +38,38 @@ public class Main {
 
 		for (int i = numberOfStarsToStartWith; i >= 1; i--) {
 			for (int j = 1; j <= numberOfStarsToStartWith; j++) {
-				if(i>=j) {
+				if (i >= j) {
 					System.out.print("*");
-				}else
+				} else
 					break;
-		}
+			}
 			System.out.println();
 
-	}
+		}
 	}
 	// function to check no is prime or not
 
 	public void checkPrimeNumber() {
+
+		System.out.println("Enter a number to check  prime or not : ");
+		int number = sc.nextInt();
+		boolean isPrime = true;
+
+		if (number == 1) {
+			isPrime = false;
+		}
+
+		for (int i = 2; i <= number / 2; i++) {
+			if (number % i == 0) {
+				isPrime = false;
+				break;
+			}
+		}
+
+		if (isPrime)
+			System.out.println("The given number " + number + " is a prime number ");
+		else
+			System.out.println("The given number " + number + " is a not prime number ");
 
 	}
 

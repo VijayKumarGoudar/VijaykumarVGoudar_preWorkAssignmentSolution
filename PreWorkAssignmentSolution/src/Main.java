@@ -33,8 +33,20 @@ public class Main {
 
 	public void printPattern() {
 
-	}
+		System.out.println("Enter a input number to print Star Pattern  : ");
+		int numberOfStarsToStartWith = sc.nextInt();
 
+		for (int i = numberOfStarsToStartWith; i >= 1; i--) {
+			for (int j = 1; j <= numberOfStarsToStartWith; j++) {
+				if(i>=j) {
+					System.out.print("*");
+				}else
+					break;
+		}
+			System.out.println();
+
+	}
+	}
 	// function to check no is prime or not
 
 	public void checkPrimeNumber() {

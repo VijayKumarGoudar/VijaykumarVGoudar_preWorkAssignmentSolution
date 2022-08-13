@@ -79,6 +79,24 @@ public class Main {
 
 		// initialize the first and second value as 0,1 respectively.
 		int first = 0, second = 1;
+
+		System.out.println("Enter a number to print Fibonacci Series : ");
+		int fibonacciSeriesLength = sc.nextInt();
+
+		for (int i = 1; i <= fibonacciSeriesLength; i++) {
+			if (i == 1) {
+				System.out.print(first + " ");
+			} else if (i == 2) {
+				System.out.print(second + " ");
+			} else {
+				System.out.print(first + second + " ");
+				int temp = first;
+				first = second;
+				second = second + temp;
+			}
+
+		}
+
 	}
 
 	// main method which contains switch and do while loop
